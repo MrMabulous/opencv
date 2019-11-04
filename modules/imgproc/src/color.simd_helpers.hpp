@@ -140,11 +140,14 @@ public:
     {
         CV_TRACE_FUNCTION();
 
+/*
         const uchar* yS = src_data + static_cast<size_t>(range.start) * src_step;
         uchar* yD = dst_data + static_cast<size_t>(range.start) * dst_step;
 
         for( int i = range.start; i < range.end; ++i, yS += src_step, yD += dst_step )
             cvt(reinterpret_cast<const _Tp*>(yS), reinterpret_cast<_Tp*>(yD), width);
+		*/
+		CV_Assert(false); // currently not implemented
     }
 
 private:

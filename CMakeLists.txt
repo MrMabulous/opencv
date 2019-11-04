@@ -649,6 +649,9 @@ if(IOS)
   # test_big_endian needs try_compile, which doesn't work for iOS
   # http://public.kitware.com/Bug/view.php?id=12288
   set(WORDS_BIGENDIAN 0)
+elseif(TRUE)
+  #TODO: hardcoded here since test_big_endian fails
+  set(WORDS_BIGENDIAN 0)
 else()
   include(TestBigEndian)
   test_big_endian(WORDS_BIGENDIAN)

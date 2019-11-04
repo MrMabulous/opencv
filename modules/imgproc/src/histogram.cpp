@@ -1776,7 +1776,7 @@ void cv::calcBackProject( const Mat* images, int nimages, const int* channels,
                           const float** ranges, double scale, bool uniform )
 {
     CV_INSTRUMENT_REGION();
-
+/*
     std::vector<uchar*> ptrs;
     std::vector<int> deltas;
     std::vector<double> uniranges;
@@ -1802,6 +1802,8 @@ void cv::calcBackProject( const Mat* images, int nimages, const int* channels,
                                           _uniranges, (float)scale, uniform );
     else
         CV_Error(CV_StsUnsupportedFormat, "");
+	*/
+	CV_Assert(false); // currently not implemented
 }
 
 #ifdef HAVE_OPENCL
